@@ -6,19 +6,23 @@ ns fern-leaf.page
 
 declare cell
 
-defn cell (node)
+defn cell (index level node)
   if (string? node)
     [] :span
-      {} :class |cirru-node :key node
+      {} :key index :class
+        if (= index 0) "|cirru-node is-head" "|cirru-node"
       , node
     [] :div
-      {} :class |cirru-list :key node
-      for ([] item node)
-        cell item
+      {} :key index :class
+        if (every? string? node) "|cirru-list is-plain"
+          if (> level 1) "|cirru-list is-inside" "|cirru-list"
+      map-indexed
+        fn (i item)$ cell i (inc level) item
+        , node
 
 defn template (content)
   let
       result $ p/pare @content
     if (:failed result)
       [] :div nil |failed
-      cell $ :value result
+      cell 0 0 $ :value result
