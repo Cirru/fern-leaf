@@ -8,7 +8,8 @@
                  [reagent "0.5.1"]
                  [hiccup "1.0.5"]
                  [cljs-ajax "0.5.1"]
-                 [binaryage/devtools "0.4.1"]]
+                 [binaryage/devtools "0.4.1"]
+                 [cirru/parser-combinator "0.0.6"]]
   :plugins [[cirru/lein-sepal "0.0.13"]
             [mvc-works/lein-html-entry "0.0.2"]
             [lein-cljsbuild "1.1.1"]
@@ -21,7 +22,7 @@
   :clean-targets ^{:protect false} [:target-path "resources/public/cljs"]
   :cljsbuild {:builds {:dev {:source-paths ["src"]
                              :figwheel {:websocket-host "192.168.0.129"}
-                             :compiler {:main "discourse_reader.core"
+                             :compiler {:main "fern-leaf.core"
                                         :asset-path "cljs/out"
                                         :output-to  "resources/public/cljs/main.js"
                                         :output-dir "resources/public/cljs/out"}}
@@ -30,4 +31,3 @@
                                          :optimizations :advanced
                                         :pretty-print false}}}}
   :figwheel {:css-dirs ["resources/public/css"]})
-  

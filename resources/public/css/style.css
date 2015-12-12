@@ -1,0 +1,17 @@
+
+body {
+  margin: 0;
+}
+
+
+.cirru-list {
+  padding-left: 10;
+  border: 1px solid hsl(0,90%,90%);
+  line-height: 28px;
+  }
+
+.cirru-node {
+  font-family: Menlo;
+  border: 1px solid hsl(0,80%,80%);
+  margin: 0 4px;
+}

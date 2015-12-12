@@ -13,3 +13,6 @@ pom.xml.asc
 
 /src
 /src-clj
+/resources/public/*.html
+/resources/public/cljs
+/figwheel_server.log
