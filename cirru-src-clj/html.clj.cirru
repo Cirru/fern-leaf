@@ -5,7 +5,7 @@ defn render (data)
   html
     [] :html
       [] :head
-        [] :title "|Discourse Reader"
+        [] :title "|Fern leaf"
         [] :link
           {} (:type |text/css) (:href |css/style.css) (:rel |stylesheet)
         [] :link

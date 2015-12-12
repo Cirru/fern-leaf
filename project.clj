@@ -29,5 +29,5 @@
                        :prod {:source-paths ["src"]
                               :compiler {:output-to "resources/public/cljs/main.js"
                                          :optimizations :advanced
-                                        :pretty-print false}}}}
+                                         :pretty-print false}}}}
   :figwheel {:css-dirs ["resources/public/css"]})
